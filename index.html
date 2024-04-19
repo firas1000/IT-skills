@@ -265,8 +265,7 @@ width: 90%;
                           /*    height: 33%;      */
         }
 
-
-        #square4 {
+       #square4 {
         animation: color2 4s linear  infinite alternate; 
        /*   background-color: #0f0;                   green */      
         position: absolute;
@@ -287,8 +286,7 @@ width: 90%;
         height: 100px;   
                        /*    height: 33%;      */
    }
-
-   
+  
    #square6 {
        animation: color2 4s linear  infinite alternate; 
       /*   background-color: #0f0;                   green */      
@@ -300,7 +298,6 @@ width: 90%;
                    /*    height: 33%;      */
    }
 
- 
    #square7 {
      animation: color1 4s linear  infinite alternate; 
     /*   background-color: #0f0;                   green */      
@@ -311,9 +308,8 @@ width: 90%;
       height: 100px;   
                  /*    height: 33%;      */
  }
-   
-
- #square8 {
+ 
+       #square8 {
    animation: color2 4s linear  infinite alternate; 
   /*   background-color: #0f0;                   green */      
    position: absolute;
@@ -324,11 +320,6 @@ width: 90%;
                /*    height: 33%;      */
  }
  
-
-
-
-
-
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -340,9 +331,6 @@ width: 90%;
     background-position: 0% 50%;
   }
 }
-
-
-
 
 @keyframes  color10 {  
       0% {
@@ -430,9 +418,6 @@ left: 110px;
 color: red;
 }
 
-
-
-
 #horizontal-1 {
     animation: color2 4s linear infinite; 
     position:absolute;
@@ -518,16 +503,20 @@ html {
   position: absolute;
   top: 50px;
 }
-
     
-@media only screen (max-width: 400px)  {
-        .scene  {
-           position: absolute;
-        animation: scene 60s infinite linear;
-        --duration: 4s;
-        width: 100%;
-              }
+@media (max-width: 400px)  {
+        .scene  {     left: 50%;    
+     /*     transform: translate(-50%, -50%);      */
+        }
+    .square1 {     display : none;     }
+    .square2 {     display : none;     }
+    .square3 {     display : none;     }
+    .square4 {     display : none;     }
+    .square5 {     display : none;     }
+    .square6 {     display : none;     }
+    .square7 {     display : none;     }
      }         
+      
 </style>
 </head>
 <body>   
