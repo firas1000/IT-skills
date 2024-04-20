@@ -22,20 +22,6 @@ media
     <head> 
     
     <style>         
-@media (max-width: 600px)  {
-           .scene  {  display : block; 
-              position : absolute;
-                 right: 600px;    
- /*   transform: translate(-50%, 0);    */
-        }
-    .square1 {     width : none;     }
-    .square2 {     width : none;     }
-    .square3 {     width : none;     }
-    .square4 {     width : none;     }
-    .square5 {     width : none;     }
-    .square6 {     width : none;     }
-    .square7 {     width : none;     }
-     }         
 
 *, *::before, *::after {
     padding: 0;
@@ -245,6 +231,7 @@ width: 90%;
  }
  } 
 
+       @media screen and (min-width: 600px)  {
         #square1 {
             animation: color1 4s linear infinite alternate; 
            /*  background-color: #f00;           red */
@@ -333,7 +320,7 @@ width: 90%;
     height: 100px;   
                /*    height: 33%;      */
  }
- 
+       }
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -512,6 +499,25 @@ html {
   top: 50px;
 }
       
+
+@media screen and (max-width: 600px)  {
+        .scene  {     right: 50%;  
+          flex-direction: column;  
+          transform: translate(-50%, 0);     
+        }
+    .square1 {      width: 0;  
+                    height: 0;    }
+    .square2 {      width: 0;  
+                    height: 0;    }
+    .square3 {      width: 0;  
+                    height: 0;    }
+    .square4 {      width: 0;  
+                    height: 0;     }
+    .square5 {      width: 0;  
+                    height: 0;   }
+    .square6 {     display : none;     }
+    .square7 {     display : none;     }
+     }         
 </style>
 </head>
 <body>   
