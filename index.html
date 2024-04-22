@@ -14,20 +14,22 @@ media
   <meta name="googlebot" content="index, follow">
   <meta name="robots" content="index, follow">
   <meta charset="utf-8">
-  <meta name="viewport" content="device-width,initial-scale=0>
+  <meta name="viewport" content="width= device-width,initial-scale=1>
   
  
-    <meta name="description" content="developer resume">   
+    <meta name="description" content="resume github fea/cae "stress analysis" 
+    c++ html css javascript frontend backend react node >   
       
     <head> 
     
-    <style>         
+    <style>
+@media screen and (min-width: 450px)  {
 
-*, *::before, *::after {
+* ::before, *::after {
     padding: 0;
     margin: 0 auto;
     box-sizing: border-box;
-}
+}    
 
 body {
   background-color:white;
@@ -180,12 +182,13 @@ body {
 /* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */
 
 .header {
+
 position: absolute;
-width: 90%;
+width: 95vw;
  height: 200px;   
  color: rgb(26, 9, 187);
- top: 20px;
- left: 45vw;
+ top: -15px;
+ left: 48vw;
  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -231,7 +234,6 @@ width: 90%;
  }
  } 
 
-       @media screen and (min-width: 600px)  {
         #square1 {
             animation: color1 4s linear infinite alternate; 
            /*  background-color: #f00;           red */
@@ -266,7 +268,8 @@ width: 90%;
                           /*    height: 33%;      */
         }
 
-       #square4 {
+
+        #square4 {
         animation: color2 4s linear  infinite alternate; 
        /*   background-color: #0f0;                   green */      
         position: absolute;
@@ -287,7 +290,8 @@ width: 90%;
         height: 100px;   
                        /*    height: 33%;      */
    }
-  
+
+   
    #square6 {
        animation: color2 4s linear  infinite alternate; 
       /*   background-color: #0f0;                   green */      
@@ -299,6 +303,7 @@ width: 90%;
                    /*    height: 33%;      */
    }
 
+ 
    #square7 {
      animation: color1 4s linear  infinite alternate; 
     /*   background-color: #0f0;                   green */      
@@ -309,8 +314,9 @@ width: 90%;
       height: 100px;   
                  /*    height: 33%;      */
  }
- 
-       #square8 {
+   
+
+ #square8 {
    animation: color2 4s linear  infinite alternate; 
   /*   background-color: #0f0;                   green */      
    position: absolute;
@@ -320,7 +326,9 @@ width: 90%;
     height: 100px;   
                /*    height: 33%;      */
  }
-       }
+ 
+
+ 
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -358,60 +366,61 @@ width: 90%;
  } 
 
 .para {
-   display : inline;
+  display : inline;
 position:absolute;
-width: 100%;
+width: 80%;
 font-size: 25px;
-/*    transform: translate(-50%, 0);    */
+/* transform: translate(-50%, 0);    */
 }
 
 .para1    {
- /*     display : inline;
-   position:absolute;         */
 animation: color20 4s linear  infinite alternate;  
-left: 210px; 
-top: 115px;
+  left: 210px;   
+top: 100px;
 }
 
 .para2   {
-animation: color10 4s linear  infinite alternate;   
-top: 240px;
-left: 110px;
-}
+ animation: color10 4s linear  infinite alternate;   
+ top: 200px;
+ left: 110px;   
+  }
 
 .para3  {
   animation: color20 4s linear  infinite alternate;   
-  top: 340px;
-  left: 210px;
+  top: 320px;
+  left: 210px;     
 }
 
 .para4   {
   animation: color10 4s linear  infinite alternate;   
-  top: 440px;
-  left: 110px;
+  top: 400px;
+  left: 110px;  
 }
 
 .para5   {
   animation: color20 4s linear  infinite alternate;   
-  top: 535px;
-  left: 210px;
+  top: 515px;
+  left: 210px;  
 }
 
 .para6  {
   animation: color10 4s linear  infinite alternate;   
-  top: 635px;
-  left: 110px;
+  top: 615px;
+  left: 110px;      
 }
 
 .para7  {
   top: 735px;
   left: 210px;
-  font-size: 15px;
+   font-size: 15px;    
 }
 
 .para7:hover    {
-color: red;
+color: rgb(64, 12, 99);
 }
+
+
+
 
 #horizontal-1 {
     animation: color2 4s linear infinite; 
@@ -476,6 +485,16 @@ color: red;
   height: 1px;  
   }                  
 
+  
+  #horizontal-8 {
+animation: color2 4s linear infinite; 
+position:absolute;
+top: 800px;
+left: 100px;
+width: 70vw; 
+height: 1px;  
+}                  
+
 .text-shade {
   text-shadow: 2px 2px 2px grey;
 }
@@ -484,43 +503,291 @@ html {
   overflow-y: scroll;
 }
 
-#banner {
+.banner {
   width: 100%;
   height: 50px;
   background: linear-gradient(270deg, rgb(64, 12, 99), white);
   background-size: 200% 200%;
   animation: gradientShift 3s ease-in-out infinite;
-  font size : 10vw;
+  font-size : 20px;
   color: red;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
-  top: 50px;
+  top: 37px;
 }
-      
+}
 
-@media screen and (max-width: 600px)  {
-        .scene  {     right: 50%;  
-          flex-direction: row;  
-       /*      transform: translate(-50%, 0);       */
-       transform : none;
+
+/*    xxxxxxxxxxxxxxx MOBILE   xxxxxxxxxxxxxxxxxxxxxxxx   */
+
+@media screen and (max-width: 450px)  {
+
+  
+@keyframes  color10 {  
+      0% {
+   color : blue;
+   }
+   /*   50% {
+   background : orange;
+   }     */
+   100% {
+   color : red;
+   }
+   } 
+
+   @keyframes  color20 {  
+    0% {
+ color : red;
+ }
+ /*     50% {
+ background : red;
+ }      */
+ 100% {
+ color : gold;
+ }
+ } 
+   
+
+.para {
+  flex-direction: column;
+  display : block;
+position:relative;
+width: 100%;
+font-size: 20px;
+/* transform: translate(-50%, 0);    */
+}
+     .para1    {  position : absolute;
+      animation: color20 4s linear  infinite alternate;  
+top: 130px; 
+          }
+      
+     .para2    {  animation: color20 4s linear  infinite alternate;   
+          top: 128px;
+          padding-bottom: 20px;
+          border-bottom: 5px solid ;
+          }
+     .para3    {   animation: color10 4s linear  infinite alternate;  
+               top: 130px;
+               padding-bottom: 20px;
+               border-bottom: 5px solid;
         }
-    .square1 {      width: 0;  
-                    height: 0;    }
-    .square2 {      width: 0;  
-                    height: 0;    }
-    .square3 {      width: 0;  
-                    height: 0;    }
-    .square4 {      width: 0;  
-                    height: 0;     }
-    .square5 {      width: 0;  
-                    height: 0;   }
-    .square6 {      width: 0;  
-                    height: 0;   }
-    .square7 {      width: 0;  
-                    height: 0;  }
-     }         
+     .para4    { animation: color20 4s linear  infinite alternate;  
+                  top: 130px;
+                  padding-bottom: 20px;
+                  border-bottom: 5px solid ;
+          }
+     .para5    {    animation: color10 4s linear  infinite alternate;  
+                  top: 135px;
+                  padding-bottom: 20px;
+                   border-bottom: 5px solid ;
+            }
+     .para6    {      animation: color20 4s linear  infinite alternate;  
+                    top: 140px;
+                    padding-bottom: 20px;
+                    border-bottom: 5px solid;
+           }
+     .para7    {      animation: color10 4s linear  infinite alternate;  
+                     top: 150px;
+                     padding-bottom: 20px;
+                     border-bottom: 5px solid;
+           }
+
+     .header   {
+      display : none;
+     }
+
+     @keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+     }
+.banner   {
+  width: 100%;
+ height: 50px;
+ background: linear-gradient(270deg, rgb(64, 12, 99), white);
+ background-size: 200% 200%;
+ animation: gradientShift 3s ease-in-out infinite;
+ font-size : 15px;
+ color: red;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: absolute;
+ top: 75px;
+}
+     
+
+/*   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   */
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@property --hue {
+	syntax: "<angle>";
+	inherits: true;
+	initial-value: 0deg;
+}
+
+.crt-monitor {
+	--scale: 0;     
+	width: 100%;
+	height: 100%;
+	background-image: 
+  repeating-linear-gradient(to bottom, black calc(0 * var(--scale)), black calc(0.2 * var(--scale)), transparent calc(0.2 * var(--scale)), transparent calc(2.8 * var(--scale)), transparent calc(3.0 * var(--scale))),
+  repeating-linear-gradient(to right, 
+#f11 calc(0 * var(--scale)), #f11 calc(0.8 * var(--scale)), #000 calc(0.8 * var(--scale)), #000 calc(1 * var(--scale)), 
+#1f1 calc(1 * var(--scale)), #1f1 calc(1.8 * var(--scale)), #000 calc(1.8 * var(--scale)), #000 calc(2 * var(--scale)), 
+#11f calc(2 * var(--scale)), #11f calc(2.8 * var(--scale)), #000 calc(2.8 * var(--scale)), #000 calc(3.4 * var(--scale))
+
+);
+background-position: center;
+/*  display: grid;     */
+align-items: center;
+justify-content: center;
+	
+filter: saturate(1) blur(.4px);          /*      <<<<<<<<<<<<<<    */
+	
+
+.content {
+	width: calc(100% + 4px);
+	margin-left: 0;
+	height: 100%;
+	background-color: rgba(238, 12, 80, 0.863);
+	font-size: 10vw;
+	/*   display: flex;      */
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	mix-blend-mode: multiply;    
+	animation: hue-shift 3s infinite linear, shake 0.03s infinite alternate forwards;
+	
+	p {
+		--s: 80%;
+		--l: 60%;
+		background-color: #98ce00;
+		background-image: linear-gradient(-30deg, 
+			hsl(var(--hue), var(--s), 100%),
+			hsl(var(--hue), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 30deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 60deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 90deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 120deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 150deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 180deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 210deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 240deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 270deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 300deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 330deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 360deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 360deg), var(--s), 100%)
+		);
+		/*    background-image: linear-gradient(white, white);      */ 
+		color: transparent;
+		background-clip: text;
+		filter: blur(2px) brightness(1);          /*  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<   */
+		
+	/*	&::first-line {
+			font-size: 3em;
+		}    */
+	}
+}
+
+}
+
+@keyframes hue-shift {
+	to {
+		--hue: 1turn;
+	}
+}
+
+@keyframes shake {
+	to {
+		transform: translateX(1px);
+	}
+}
+
+@keyframes scan {
+	to {
+		transform: translateY(120%) skewY(-5deg);
+		top: 100%;
+	}
+}
+
+
+#horizontal-1 {
+    animation: color20 4s linear infinite; 
+    position: absolute;
+    top: 200px;
+    left:  0;
+    width: 2000px; 
+    height: 100px;  
+    }                  
+
+  #horizontal-2 {
+  animation: color10 4s linear infinite; 
+  position:absolute;
+  top: 200px;
+  left:100px;
+  width: 70vw; 
+  height: 1px;  
+  }                  
+
+  #horizontal-3 {
+  animation: color20 4s linear infinite; 
+  position:absolute;
+  top: 300px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                  
+
+#horizontal-4 {
+  animation: color10 4s linear infinite; 
+  position:absolute;
+  top: 400px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                 
+  
+#horizontal-5 {
+  animation: color20 4s linear infinite; 
+  position:absolute;
+  top: 500px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                   
+  
+#horizontal-6 {
+  animation: color10 4s linear infinite; 
+  position:absolute;
+  top: 600px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                  
+  
+  #horizontal-7 {
+  animation: color20 4s linear infinite; 
+  position:absolute;
+  top: 700px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                  
+}
+
 </style>
 </head>
 <body>   
@@ -551,10 +818,18 @@ html {
   <div id="square7"></div>
   <div id="square8"></div>
 
+  
+  <div class="crt-monitor">
+    <div class="content">
+      <p class="x123">FIRAS HALABIYA </p>
+    </div>
+  </div>
+  
+
       <div class="header">      
-      <p class="inside-header text-shade">    RESUME FOR FIRAS HALABIYA</p>
+      <p class="inside-header" class="text-shade">    RESUME FOR FIRAS HALABIYA</p>
       </div>
-      <h1 id="banner">Front-End Dynamic Design & Back-End</h1> 
+      <h1 class="banner">Front-End Dynamic Design & Back-End</h1> 
 
 
       <h2 class="para para1">Programing Languages: C++ -- html/css/Javascript <br>
@@ -573,13 +848,14 @@ html {
     <h2 class="para para6">Tel: ++ 964 790 448 8782 </h2> 
     <a href="mailto:fhalabiya@gmail.com" class="para para7">fhalabiya@gmail.com</a>
 
-   <div id="horizontal-1"></div>
+   <div id="horizontal-1" class="para"></div>
    <div id="horizontal-2"></div>
    <div id="horizontal-3"></div>
    <div id="horizontal-4"></div>
    <div id="horizontal-5"></div>
    <div id="horizontal-6"></div>
    <div id="horizontal-7"></div> 
+   <div id="horizontal-8"></div>
 
 </body>
 
