@@ -21,6 +21,7 @@ media
     c++ html css javascript frontend backend react node >   
       
     <head> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     
     <style>
 @media screen and (min-width: 450px)  {
@@ -406,17 +407,29 @@ top: 100px;
 .para6  {
   animation: color10 4s linear  infinite alternate;   
   top: 615px;
-  left: 110px;      
+  left: 110px;  
+  font-size: 20px;    
+  text-decoration : none;
 }
+
+.para6:hover     {
+  animation: none;
+  color: rgb(64, 12, 99);
+text-decoration: underline;
+}
+
 
 .para7  {
   top: 735px;
   left: 210px;
-   font-size: 15px;    
+   font-size: 20px;    
+   text-decoration: none;
 }
 
 .para7:hover    {
+animation: none;
 color: rgb(64, 12, 99);
+text-decoration: underline;
 }
 
 
@@ -586,15 +599,20 @@ top: 130px;
      .para6    {      animation: color20 4s linear  infinite alternate;  
                     top: 140px;
                     padding-bottom: 20px;
-                    border-bottom: 5px solid;
+                /*    border-bottom: 5px solid;     */
+                    font-size: 20px;
+                    text-decoration: none;
            }
+        
      .para7    {      animation: color10 4s linear  infinite alternate;  
-                     top: 150px;
+                     top: 120px;
                      padding-bottom: 20px;
                      border-bottom: 5px solid;
+                     text-decoration: none;
            }
-
-     .header   {
+  
+  
+           .header   {
       display : none;
      }
 
@@ -845,8 +863,28 @@ filter: saturate(1) blur(.4px);          /*      <<<<<<<<<<<<<<    */
 
     <h2 class="para para5">Looking for remote work or free lance work</h2> 
 
-    <h2 class="para para6">Tel: ++ 964 790 448 8782 </h2> 
-    <a href="mailto:fhalabiya@gmail.com" class="para para7">fhalabiya@gmail.com</a>
+    
+    
+<div class="para para6">
+  <a href="https://www.facebook.com/firashalabiya" class="para6" target="_blank">
+  <i class="fab fa-facebook"></i>
+  <span>www.facebook.com/firashalabiya</span> </a><br>
+  <a href="https://www.linkedin.com/firashalabiya" class="para6"  target="_blank">
+  <i class="fab fa-linkedin"></i>
+<span>www.linkedin.com/firashalabiya</span> </a><br>
+<a href="https://www.github.com/firas1000" class="para6"  target="_blank">
+<i class="fab fa-github"></i>
+<span>www.github.com/firas1000</span>   </a>
+</div>
+
+
+<a href="https://www.github.com/firas1000" class="para para7"  target="_blank">
+  <i class="fab fa-google"></i>
+  <span>fhalabiya@gmail.com</span>   </a>
+    
+   <!--    <a href="mailto:fhalabiya@gmail.com" class="para para7">fhalabiya@gmail.com
+         <i class="fab fa-google"></i>
+        </a>                            -->
 
    <div id="horizontal-1" class="para"></div>
    <div id="horizontal-2"></div>
