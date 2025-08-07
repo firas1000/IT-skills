@@ -1,56 +1,900 @@
+<!-- display : flex
+eventlistener(click, ()=>  {})   in addition to click what does it take
+display : none
+line 41 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+N and T 
+media   
+   <link rel="stylesheet" type="text/css" href="styles.css">  -->
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Resume For Firas Halabiya</title>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
+<title> "Resume For Firas Halabiya" </title>
+
   <meta name="googlebot" content="index, follow">
   <meta name="robots" content="index, follow">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="resume github fea/cae stress analysis c++ html css javascript frontend backend react node">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width= device-width,initial-scale=1>
+  
+ 
+    <meta name="description" content="resume github fea/cae "stress analysis" 
+    c++ html css javascript frontend backend react node >   
+      
+    <head> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <style>
+@media screen and (min-width: 450px)  {
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
-    @property --hue {
-      syntax: "<angle>";
-      inherits: true;
-      initial-value: 0deg;
-    }
+* ::before, *::after {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+}    
 
-    html {
-      overflow-y: scroll;
-    }
+body {
+  background-color:white;
+  color: #fff;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  perspective: 40em;
+ /*             overflow: hidden;       */
+  font-size: 2vh;
+  
+  
+  * {
+    transform-style: preserve-3d;
+  }
+}
 
-    .banner {
-      width: 100%;
-      height: 50px;
-      background: linear-gradient(270deg, rgb(64, 12, 99), white);
-      background-size: 200% 200%;
-      animation: gradientShift 3s ease-in-out infinite;
-      font-size: 20px;
-      color: red;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+.scene  {
+     position: absolute;
+  animation: scene 60s infinite linear;
+  
+  --duration: 4s;
+  right: 200px;
+        }
+
+@keyframes scene {
+  to { rotate: y -1turn; }
+}
+
+.mainStick {
+  --angle: asin(3/5);
+  position: absolute;
+  inset: -0px -10em;
+  background-color: #fff;
+  animation: poleBase var(--duration) infinite ease-in;
+
+  .stick {
+    position: absolute;
+    inset: 0em;
+    background-color: #f00;
+    animation: poleTranslate var(--duration) calc(var(--duration) * -0) infinite cubic-bezier(.4,0,.6,2.3);
+
+    i {
       position: absolute;
-      top: 37px;
+      inset: -0.4em -3em;
+      background-color: hsl(0 0% calc((sin(var(--i) * 45deg) + 1) * 40% + 20%) );
+      box-shadow: 0 0 0.5em #0005 inset;
+      transform: translateY(-2em) rotateX(calc(var(--i) * 45deg)) translateZ(0.95em);
+    }
+  }
+}
+
+@keyframes poleBase {
+  0% { 
+    transform-origin: right;
+    transform: translate(-2em, 0em) rotate(calc(var(--angle) * -1));
+    animation-timing-function: ease-out;
+  }
+  4% { 
+    transform-origin: right;
+    transform: translate(-2em, 0em) rotate(calc(var(--angle) * -0.9));
+    animation-timing-function: ease-in;
+  }
+  10% { 
+    transform-origin: right;
+    transform: translate(-2em, 0em) rotate(calc(var(--angle) * -1));
+  }
+  25% { 
+    transform-origin: left;
+    transform: translate(2em, 12em) rotate(calc(var(--angle) * -1));
+  }
+  50% { 
+    transform-origin: left;
+    transform: translate(2em, 12em) rotate(var(--angle));
+    animation-timing-function: ease-out;
+  }
+  54% { 
+    transform-origin: left;
+    transform: translate(2em, 12em) rotate(calc(var(--angle) * 0.9));
+    animation-timing-function: ease-in;
+  }
+  60% { 
+    transform-origin: left;
+    transform: translate(2em, 12em) rotate(var(--angle));
+  }
+  75% {
+    transform-origin: right;
+    transform: translate(-2em, 24em) rotate(var(--angle));
+  }
+  100% {
+    transform-origin: right;
+    transform: translate(-2em, 24em) rotate(calc(var(--angle) * -1));
+  }
+  
+  0% { translate: 0 0; animation-timing-function: linear; }
+  100% { translate: 0 -24em; }
+}
+
+@keyframes poleTranslate {
+  0%, 100% { translate: 3em; }
+  50% { translate: -3em; }
+}
+
+.sticks {
+  .stick {
+    position: absolute;
+    animation: stick calc(var(--duration) * 4) calc(var(--duration) / -2 * var(--s)) infinite linear;
+
+    &:nth-child(even) {
+      --translateX: -8em;
     }
 
-    @media screen and (min-width: 450px) {
-      .header {
+    i {
+      position: absolute;
+      inset: -0.4em -10em;
+      background-color: hsl(calc(var(--s) * 45) 100% calc((sin(var(--i) * 45deg) + 1) * 25% + 25%));
+      box-shadow: 0 0 0.5em #0005 inset;
+      transform: rotateY(90deg) rotateX(calc(var(--i) * 45deg)) translateZ(0.95em);
+  
+      &:nth-child(2)::after,
+      &:nth-child(3)::after,
+      &:nth-child(4)::after {
+        content: '';
         position: absolute;
-        width: 95vw;
-        height: 200px;
-        color: rgb(26, 9, 187);
-        top: -15px;
-        left: 48vw;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        inset: 0;
+        backface-visibility: hidden;
+        background-image: radial-gradient(circle at var(--bgPosition, center), var(--shadowColor, #000), transparent 2em);
+        animation: shadow calc(var(--duration) * 4) calc(var(--duration) / -2 * var(--s)) infinite;
       }
+      
+      &:nth-child(2)::after { --bgPosition: 50% -1.2em; }
+      &:nth-child(3)::after { --shadowColor: #0008; }
+      &:nth-child(4)::after { --bgPosition: 50% 2em; }
+    }
+  }  
+}
 
-      .inside-header {
-        box-shadow: 5px 5px 5px rgba(202, 109, 109, 0.7);
-        font-size: 30px;
-        font: normal 28px Cookie, Arial, Helvetica, sans-serif;
-        top: 50%;
-        left
-
+@keyframes stick {
+  0% { transform: translate(var(--translateX, 8em), 48em); }
+  37.5%, 38% { transform: translate(var(--translateX, 8em), 12em); }
+  39% { transform: translate(var(--translateX, 8em), 10.56em); }
+  100% { transform: translate(var(--translateX, 8em), -48em); }
+}
+
+@keyframes shadow {
+  0%, 36%, 60%, 100% { opacity: 0; }
+  40%, 55% { opacity: 1;}
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  */
+
+.header {
+
+position: absolute;
+width: 95vw;
+ height: 200px;   
+ color: rgb(26, 9, 187);
+ top: -15px;
+ left: 48vw;
+ font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.inside-header    {
+ box-shadow: 5px 5px 5px rgba(202, 109, 109, 0.7);
+ font-size: 30px;
+ font: normal 28px Cookie, Arial, Helvetica, sans-serif;
+    /*   font-style: strong italic;     */
+ top: 50%; /* This positions the paragraph in the middle of the box */
+  left: 50%; /* This positions the paragraph in the middle of the box */
+  transform: translate(-50%, -50%); /* This ensures the paragraph is centered properly */
+
+ }
+
+ /*
+.simple {
+  box-shadow: 5px 5px 5px rgba(202, 109, 109, 0.7);
+}
+
+*/
+
+        @keyframes  color1 {  
+      0% {
+   background : gold;
+   }
+   /*   50% {
+   background : orange;
+   }     */
+   100% {
+   background : black;
+   }
+   } 
+
+   @keyframes  color2 {  
+    0% {
+ background : black;
+ }
+ /*     50% {
+ background : red;
+ }      */
+ 100% {
+ background : gold;
+ }
+ } 
+
+        #square1 {
+            animation: color1 4s linear infinite alternate; 
+           /*  background-color: #f00;           red */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;                 /*    width: 33%;    */
+            height: 100px;   
+            opacity:.5;             /*    height: 33%;   */
+        }
+
+        #square2 {
+            animation: color2 4s linear  infinite alternate; 
+           /*   background-color: #0f0;                   green */      
+            position: absolute;
+            top: 100px;                    /*    top: 0;        */
+            left: 100px;                   /*    left: 33%;      */
+             width: 100px;             /*    width: 33%;       */
+             height: 100px;   
+                     /*    height: 33%;      */
+        }
+
+
+        #square3 {
+            animation: color1 4s linear  infinite alternate; 
+           /*   background-color: #0f0;                   green */      
+            position: absolute;
+            top: 200px;                    /*    top: 0;        */
+            left: 0px;                   /*    left: 33%;      */
+             width: 100px;             /*    width: 33%;       */
+             height: 100px;   
+                          /*    height: 33%;      */
+        }
+
+
+        #square4 {
+        animation: color2 4s linear  infinite alternate; 
+       /*   background-color: #0f0;                   green */      
+        position: absolute;
+        top: 300px;                    /*    top: 0;        */
+        left: 100px;                   /*    left: 33%;      */
+         width: 100px;             /*    width: 33%;       */
+         height: 100px;   
+               /*    height: 33%;      */
+    }
+
+    #square5 {
+       animation: color1 4s linear  infinite alternate; 
+      /*   background-color: #0f0;                   green */      
+       position: absolute;
+       top: 400px;                    /*    top: 0;        */
+       left: 0px;                   /*    left: 33%;      */
+        width: 100px;             /*    width: 33%;       */
+        height: 100px;   
+                       /*    height: 33%;      */
+   }
+
+   
+   #square6 {
+       animation: color2 4s linear  infinite alternate; 
+      /*   background-color: #0f0;                   green */      
+       position: absolute;
+       top: 500px;                    /*    top: 0;        */
+       left: 100px;                   /*    left: 33%;      */
+        width: 100px;             /*    width: 33%;       */
+        height: 100px;   
+                   /*    height: 33%;      */
+   }
+
+ 
+   #square7 {
+     animation: color1 4s linear  infinite alternate; 
+    /*   background-color: #0f0;                   green */      
+     position: absolute;
+     top: 600px;                    /*    top: 0;        */
+     left: 0px;                   /*    left: 33%;      */
+      width: 100px;             /*    width: 33%;       */
+      height: 100px;   
+                 /*    height: 33%;      */
+ }
+   
+
+ #square8 {
+   animation: color2 4s linear  infinite alternate; 
+  /*   background-color: #0f0;                   green */      
+   position: absolute;
+   top: 700px;                    /*    top: 0;        */
+   left: 100px;                   /*    left: 33%;      */
+    width: 100px;             /*    width: 33%;       */
+    height: 100px;   
+               /*    height: 33%;      */
+ }
+ 
+
+ 
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes  color10 {  
+      0% {
+   color : gold;
+   }
+   /*   50% {
+   background : orange;
+   }     */
+   100% {
+   color : red;
+   }
+   } 
+
+   @keyframes  color20 {  
+    0% {
+ color : red;
+ }
+ /*     50% {
+ background : red;
+ }      */
+ 100% {
+ color : gold;
+ }
+ } 
+
+.para {
+  display : inline;
+position:absolute;
+width: 80%;
+font-size: 25px;
+/* transform: translate(-50%, 0);    */
+}
+
+.para1    {
+animation: color20 4s linear  infinite alternate;  
+  left: 210px;   
+top: 100px;
+}
+
+.para2   {
+ animation: color10 4s linear  infinite alternate;   
+ top: 200px;
+ left: 110px;   
+  }
+
+.para3  {
+  animation: color20 4s linear  infinite alternate;   
+  top: 320px;
+  left: 210px;     
+}
+
+.para4   {
+  animation: color10 4s linear  infinite alternate;   
+  top: 400px;
+  left: 110px;  
+}
+
+.para5   {
+  animation: color20 4s linear  infinite alternate;   
+  top: 515px;
+  left: 210px;  
+}
+
+.para6  {
+  animation: color10 4s linear  infinite alternate;   
+  top: 615px;
+  left: 110px;  
+  font-size: 20px;    
+  text-decoration : none;
+}
+
+.para6:hover     {
+  animation: none;
+  color: rgb(64, 12, 99);
+text-decoration: underline;
+}
+
+
+.para7  {
+  top: 735px;
+  left: 210px;
+   font-size: 20px;    
+   text-decoration: none;
+}
+
+.para7:hover    {
+animation: none;
+color: rgb(64, 12, 99);
+text-decoration: underline;
+}
+
+
+
+
+#horizontal-1 {
+    animation: color2 4s linear infinite; 
+    position:absolute;
+    top: 100px;
+    left:100px;
+    width: 70vw; 
+    height: 1px;  
+    }                  
+
+  #horizontal-2 {
+  animation: color1 4s linear infinite; 
+  position:absolute;
+  top: 200px;
+  left:100px;
+  width: 70vw; 
+  height: 1px;  
+  }                  
+
+  #horizontal-3 {
+  animation: color2 4s linear infinite; 
+  position:absolute;
+  top: 300px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                  
+
+#horizontal-4 {
+  animation: color1 4s linear infinite; 
+  position:absolute;
+  top: 400px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                 
+  
+#horizontal-5 {
+  animation: color2 4s linear infinite; 
+  position:absolute;
+  top: 500px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                   
+  
+#horizontal-6 {
+  animation: color1 4s linear infinite; 
+  position:absolute;
+  top: 600px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                  
+  
+  #horizontal-7 {
+  animation: color2 4s linear infinite; 
+  position:absolute;
+  top: 700px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                  
+
+  
+  #horizontal-8 {
+animation: color2 4s linear infinite; 
+position:absolute;
+top: 800px;
+left: 100px;
+width: 70vw; 
+height: 1px;  
+}                  
+
+.text-shade {
+  text-shadow: 2px 2px 2px grey;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+.banner {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(270deg, rgb(64, 12, 99), white);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease-in-out infinite;
+  font-size : 20px;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 37px;
+}
+}
+
+
+/*    xxxxxxxxxxxxxxx MOBILE   xxxxxxxxxxxxxxxxxxxxxxxx   */
+
+@media screen and (max-width: 450px)  {
+
+  
+@keyframes  color10 {  
+      0% {
+   color : blue;
+   }
+   /*   50% {
+   background : orange;
+   }     */
+   100% {
+   color : red;
+   }
+   } 
+
+   @keyframes  color20 {  
+    0% {
+ color : red;
+ }
+ /*     50% {
+ background : red;
+ }      */
+ 100% {
+ color : gold;
+ }
+ } 
+   
+
+.para {
+  flex-direction: column;
+  display : block;
+position:relative;
+width: 100%;
+font-size: 20px;
+/* transform: translate(-50%, 0);    */
+}
+     .para1    {  position : absolute;
+      animation: color20 4s linear  infinite alternate;  
+top: 130px; 
+          }
+      
+     .para2    {  animation: color20 4s linear  infinite alternate;   
+          top: 128px;
+          padding-bottom: 20px;
+          border-bottom: 5px solid ;
+          }
+     .para3    {   animation: color10 4s linear  infinite alternate;  
+               top: 130px;
+               padding-bottom: 20px;
+               border-bottom: 5px solid;
+        }
+     .para4    { animation: color20 4s linear  infinite alternate;  
+                  top: 130px;
+                  padding-bottom: 20px;
+                  border-bottom: 5px solid ;
+          }
+     .para5    {    animation: color10 4s linear  infinite alternate;  
+                  top: 135px;
+                  padding-bottom: 20px;
+                   border-bottom: 5px solid ;
+            }
+     .para6    {      animation: color20 4s linear  infinite alternate;  
+                    top: 140px;
+                    padding-bottom: 20px;
+                /*    border-bottom: 5px solid;     */
+                    font-size: 20px;
+                    text-decoration: none;
+           }
+        
+     .para7    {      animation: color10 4s linear  infinite alternate;  
+                     top: 120px;
+                     padding-bottom: 20px;
+                     border-bottom: 5px solid;
+                     text-decoration: none;
+           }
+  
+  
+           .header   {
+      display : none;
+     }
+
+     @keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+     }
+.banner   {
+  width: 100%;
+ height: 50px;
+ background: linear-gradient(270deg, rgb(64, 12, 99), white);
+ background-size: 200% 200%;
+ animation: gradientShift 3s ease-in-out infinite;
+ font-size : 15px;
+ color: red;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: absolute;
+ top: 75px;
+}
+     
+
+/*   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx   */
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@property --hue {
+	syntax: "<angle>";
+	inherits: true;
+	initial-value: 0deg;
+}
+
+.crt-monitor {
+	--scale: 0;     
+	width: 100%;
+	height: 100%;
+	background-image: 
+  repeating-linear-gradient(to bottom, black calc(0 * var(--scale)), black calc(0.2 * var(--scale)), transparent calc(0.2 * var(--scale)), transparent calc(2.8 * var(--scale)), transparent calc(3.0 * var(--scale))),
+  repeating-linear-gradient(to right, 
+#f11 calc(0 * var(--scale)), #f11 calc(0.8 * var(--scale)), #000 calc(0.8 * var(--scale)), #000 calc(1 * var(--scale)), 
+#1f1 calc(1 * var(--scale)), #1f1 calc(1.8 * var(--scale)), #000 calc(1.8 * var(--scale)), #000 calc(2 * var(--scale)), 
+#11f calc(2 * var(--scale)), #11f calc(2.8 * var(--scale)), #000 calc(2.8 * var(--scale)), #000 calc(3.4 * var(--scale))
+
+);
+background-position: center;
+/*  display: grid;     */
+align-items: center;
+justify-content: center;
+	
+filter: saturate(1) blur(.4px);          /*      <<<<<<<<<<<<<<    */
+	
+
+.content {
+	width: calc(100% + 4px);
+	margin-left: 0;
+	height: 100%;
+	background-color: rgba(238, 12, 80, 0.863);
+	font-size: 10vw;
+	/*   display: flex;      */
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	mix-blend-mode: multiply;    
+	animation: hue-shift 3s infinite linear, shake 0.03s infinite alternate forwards;
+	
+	p {
+		--s: 80%;
+		--l: 60%;
+		background-color: #98ce00;
+		background-image: linear-gradient(-30deg, 
+			hsl(var(--hue), var(--s), 100%),
+			hsl(var(--hue), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 30deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 60deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 90deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 120deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 150deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 180deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 210deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 240deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 270deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 300deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 330deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 360deg), var(--s), var(--l)),
+			hsl(calc(var(--hue) + 360deg), var(--s), 100%)
+		);
+		/*    background-image: linear-gradient(white, white);      */ 
+		color: transparent;
+		background-clip: text;
+		filter: blur(2px) brightness(1);          /*  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<   */
+		
+	/*	&::first-line {
+			font-size: 3em;
+		}    */
+	}
+}
+
+}
+
+@keyframes hue-shift {
+	to {
+		--hue: 1turn;
+	}
+}
+
+@keyframes shake {
+	to {
+		transform: translateX(1px);
+	}
+}
+
+@keyframes scan {
+	to {
+		transform: translateY(120%) skewY(-5deg);
+		top: 100%;
+	}
+}
+
+
+#horizontal-1 {
+    animation: color20 4s linear infinite; 
+    position: absolute;
+    top: 200px;
+    left:  0;
+    width: 2000px; 
+    height: 100px;  
+    }                  
+
+  #horizontal-2 {
+  animation: color10 4s linear infinite; 
+  position:absolute;
+  top: 200px;
+  left:100px;
+  width: 70vw; 
+  height: 1px;  
+  }                  
+
+  #horizontal-3 {
+  animation: color20 4s linear infinite; 
+  position:absolute;
+  top: 300px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                  
+
+#horizontal-4 {
+  animation: color10 4s linear infinite; 
+  position:absolute;
+  top: 400px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                 
+  
+#horizontal-5 {
+  animation: color20 4s linear infinite; 
+  position:absolute;
+  top: 500px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                   
+  
+#horizontal-6 {
+  animation: color10 4s linear infinite; 
+  position:absolute;
+  top: 600px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                  
+  
+  #horizontal-7 {
+  animation: color20 4s linear infinite; 
+  position:absolute;
+  top: 700px;
+  left: 100px;
+  width: 70vw; 
+  height: 1px;  
+  }                  
+}
+
+</style>
+</head>
+<body>   
+        <div class="scene">
+        <div class="body"></div>    
+        <div class="mainStick">
+        <div class="stick"><i style="--i: 0;"></i><i style="--i: 1;"></i><i style="--i: 2;"></i><i style="--i: 3;"></i><i style="--i: 4;"></i><i style="--i: 5;"></i><i style="--i: 6;"></i><i style="--i: 7;"></i></div>
+        </div>
+        
+        <div class="sticks">
+          <div class="stick" style="--s: 0"><i style="--i: 0;"></i><i style="--i: 1;"></i><i style="--i: 2;"></i><i style="--i: 3;"></i><i style="--i: 4;"></i><i style="--i: 5;"></i><i style="--i: 6;"></i><i style="--i: 7;"></i></div>
+          <div class="stick" style="--s: 1"><i style="--i: 0;"></i><i style="--i: 1;"></i><i style="--i: 2;"></i><i style="--i: 3;"></i><i style="--i: 4;"></i><i style="--i: 5;"></i><i style="--i: 6;"></i><i style="--i: 7;"></i></div>
+          <div class="stick" style="--s: 2"><i style="--i: 0;"></i><i style="--i: 1;"></i><i style="--i: 2;"></i><i style="--i: 3;"></i><i style="--i: 4;"></i><i style="--i: 5;"></i><i style="--i: 6;"></i><i style="--i: 7;"></i></div>
+          <div class="stick" style="--s: 3"><i style="--i: 0;"></i><i style="--i: 1;"></i><i style="--i: 2;"></i><i style="--i: 3;"></i><i style="--i: 4;"></i><i style="--i: 5;"></i><i style="--i: 6;"></i><i style="--i: 7;"></i></div>
+          <div class="stick" style="--s: 4"><i style="--i: 0;"></i><i style="--i: 1;"></i><i style="--i: 2;"></i><i style="--i: 3;"></i><i style="--i: 4;"></i><i style="--i: 5;"></i><i style="--i: 6;"></i><i style="--i: 7;"></i></div>
+          <div class="stick" style="--s: 5"><i style="--i: 0;"></i><i style="--i: 1;"></i><i style="--i: 2;"></i><i style="--i: 3;"></i><i style="--i: 4;"></i><i style="--i: 5;"></i><i style="--i: 6;"></i><i style="--i: 7;"></i></div>
+          <div class="stick" style="--s: 6"><i style="--i: 0;"></i><i style="--i: 1;"></i><i style="--i: 2;"></i><i style="--i: 3;"></i><i style="--i: 4;"></i><i style="--i: 5;"></i><i style="--i: 6;"></i><i style="--i: 7;"></i></div>
+          <div class="stick" style="--s: 7"><i style="--i: 0;"></i><i style="--i: 1;"></i><i style="--i: 2;"></i><i style="--i: 3;"></i><i style="--i: 4;"></i><i style="--i: 5;"></i><i style="--i: 6;"></i><i style="--i: 7;"></i></div>
+        </div>
+        </div>
+ 
+  <div id="square1"></div>
+  <div id="square2"></div>
+  <div id="square3"></div>
+  <div id="square4"></div>
+  <div id="square5"></div>
+  <div id="square6"></div>
+  <div id="square7"></div>
+  <div id="square8"></div>
+
+  
+  <div class="crt-monitor">
+    <div class="content">
+      <p class="x123">FIRAS HALABIYA </p>
+    </div>
+  </div>
+  
+
+      <div class="header">      
+      <p class="inside-header" class="text-shade">    RESUME FOR FIRAS HALABIYA</p>
+      </div>
+      <h1 class="banner">Front-End Dynamic Design & Back-End</h1> 
+
+
+      <h2 class="para para1">Programing Languages: C++ -- html/css/Javascript <br>
+                             Typescript -- Node.js -- json/XML-- Ajax -- SASS </h2>
+
+
+      <h2 class="para para2">React-- Angular -- Ember -- Vue -- Django--Express <br>
+                             Bootstrap -- mySQL -- Python/Pandas etc.</h2>
+
+    <h2 class="para para3"> Master Degree in Structural Eng. - Concordia Univ. - Montreal - Canada  2008</h2>
+    
+    <h2 class="para para4">Engineering Softwares: AUTOCAD -- Hypermesh -- NASTRAN -- ETABS -- STAAD -- Prokon etc.</h2> 
+
+    <h2 class="para para5">Looking for remote work or free lance work</h2> 
+
+    
+    
+<div class="para para6">
+  <a href="https://www.facebook.com/firashalabiya" class="para6" target="_blank">
+  <i class="fab fa-facebook"></i>
+  <span>www.facebook.com/firashalabiya</span> </a><br>
+  <a href="https://www.linkedin.com/firashalabiya" class="para6"  target="_blank">
+  <i class="fab fa-linkedin"></i>
+<span>www.linkedin.com/firashalabiya</span> </a><br>
+<a href="https://www.github.com/firas1000" class="para6"  target="_blank">
+<i class="fab fa-github"></i>
+<span>www.github.com/firas1000</span>   </a>
+</div>
+
+
+<a href="https://www.github.com/firas1000" class="para para7"  target="_blank">
+  <i class="fab fa-google"></i>
+  <span>fhalabiya@gmail.com</span>   </a>
+    
+   <!--    <a href="mailto:fhalabiya@gmail.com" class="para para7">fhalabiya@gmail.com
+         <i class="fab fa-google"></i>
+        </a>                            -->
+
+   <div id="horizontal-1" class="para"></div>
+   <div id="horizontal-2"></div>
+   <div id="horizontal-3"></div>
+   <div id="horizontal-4"></div>
+   <div id="horizontal-5"></div>
+   <div id="horizontal-6"></div>
+   <div id="horizontal-7"></div> 
+   <div id="horizontal-8"></div>
+
+</body>
+
+</html>
